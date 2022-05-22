@@ -25,3 +25,7 @@ def encode_categorical_features(data):
             encoder[col].fit(data[col])
             data[col]=encoder[col].transform(data[col])
     return data, encoder
+
+
+if __name__ == '__main__':
+    print(f"{__file__} called")
