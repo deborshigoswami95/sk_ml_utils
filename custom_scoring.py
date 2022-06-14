@@ -8,7 +8,7 @@ def get_custom_scorer(scorer,greater_is_better):
 
 
 def MAPE(y_pred,y_true):
-  np.mean(abs(y_pred-y_true)*100/y_true)
+  return np.mean(abs(y_pred-y_true)*100/y_true)
     
   
 if __name__=="__main__":
