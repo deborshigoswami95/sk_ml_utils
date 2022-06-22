@@ -21,7 +21,7 @@ def encode_categorical_features(data):
     encoder={}
     for col in data:
         if data[col].dtype=='category':
-            encoder[col]=LabelEncoder()
+            encoder[col]=LabelEncoderExt()
             encoder[col].fit(data[col])
             data[col]=encoder[col].transform(data[col])
     return data, encoder
